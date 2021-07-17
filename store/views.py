@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from carts.models import CartItem
 from carts.views import _cart_id
 from django.core.paginator import EmptyPage,PageNotAnInteger,Paginator
+from django.db.models import Q
 
 # Create your views here.
 
@@ -44,3 +45,19 @@ def product_detail(request, category_slug, product_slug):
 
     except :
         return HttpResponse("Product not found")
+
+
+def search(request):
+    products = []
+    if 'keyword' in request.GET:
+        keyword = request.GET.get('keyword')
+        if keyword:
+            products = Product.objects.filter(Q(description__icontains=keyword) | Q(product_name__icontains=keyword)).order_by('id')
+
+        context = {
+
+            'products':products,
+            'num_products':len(products),
+        }
+
+    return render(request,'store/store.html',context)
