@@ -39,6 +39,14 @@
 	   * CSS
 
 
+### Instructions
+1. change working directory to this directory.
+2. Run the server using "python manage.py runserver"
+3. By default server runs on port 8000
+4. To change pass port number in 2.
+5. To access admin panel use ~/adminsk
+6. Honeypot at path ~/admin
+
 ### Requirements
 * asgiref==3.2.10
 * certifi==2021.5.30
