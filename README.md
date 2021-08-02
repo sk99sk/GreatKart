@@ -1,7 +1,6 @@
 # GreatKart
 ## An Ecommerece Store
 
-![GreatKart](/Screenshot from 2021-08-02 16-45-25.png)
 
 ## Features:
     * Two Factor Authenticaton
