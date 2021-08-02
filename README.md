@@ -40,12 +40,13 @@
 
 
 ### Instructions
-1. change working directory to this directory.
-2. Run the server using "python manage.py runserver"
-3. By default server runs on port 8000
-4. To change pass port number in 2.
-5. To access admin panel use ~/adminsk
-6. Honeypot at path ~/admin
+1. Change working directory to this directory.
+2. Chane directory of static files in ./greatkart/settings.py
+3. Run the server using "python manage.py runserver"
+4. By default server runs on port 8000
+5. To change pass port number in 2.
+6. To access admin panel use ~/adminsk
+7. Honeypot at path ~/admin
 
 ### Requirements
 * asgiref==3.2.10
